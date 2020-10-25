@@ -55,6 +55,7 @@ const Records = () => {
 
   return (
     <RecordItems>
+      <h2>House Price Paid Data</h2>
       <DateRangePickerContainer>
         {/* Airbnb's date picker component */}
         <DateRangePicker
