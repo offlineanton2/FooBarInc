@@ -29,3 +29,10 @@ npm start
 
 To view the UI in your browser, simply access localhost:3000 in your web browser.
 
+
+### Packages used
+
+## React Testing Library
+
+React testing library was used for testing the UI with unit tests in an accessible way.
+
