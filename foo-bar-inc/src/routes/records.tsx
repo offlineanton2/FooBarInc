@@ -30,6 +30,10 @@ const DateRangePickerContainer = styled.div`
   margin-bottom: 2em;
 `;
 
+/**
+ * The records route that shows all of the records
+ * Contains a date picker to limit the records shown
+ */
 const Records = () => {
   moment.locale('en-GB');
 
@@ -38,6 +42,7 @@ const Records = () => {
   const [endDate, setEndDate] = useState<Moment | null>(null);
   const [focusedInput, setFocusedInput] = useState<"startDate" | "endDate" | null>(null);
 
+  // Filter the data using the start and end date selected
   const filteredData = data.filter(data => {
     if (!startDate && !endDate) return data;
     if (!endDate) return moment(data.dateOfTransfer) > moment(startDate);
@@ -45,11 +50,13 @@ const Records = () => {
     return moment(data.dateOfTransfer) > moment(startDate) && moment(data.dateOfTransfer) < moment(endDate);
   });
 
+  // Show only the date on the current page
   const dataDisplayed = filteredData.slice(currentPage * 30 - 30, currentPage * 30);
 
   return (
     <RecordItems>
       <DateRangePickerContainer>
+        {/* Airbnb's date picker component */}
         <DateRangePicker
           startDate={startDate}
           startDateId="recordStartDateRangePicker"
@@ -91,7 +98,5 @@ const Records = () => {
     </RecordItems>
   );
 };
-
-
 
 export default Records;

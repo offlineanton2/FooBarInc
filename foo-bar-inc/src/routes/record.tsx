@@ -15,6 +15,9 @@ const StyledRecord = styled.div`
   max-width: 800px;
 `;
 
+/**
+ * Single record route that shows the full details of the record
+ */
 const Record = () => {
   const recordId = useLocation().pathname.replace('/', '');
   const record = data.filter(record => record.transactionUniqueIdentifier === `{${recordId}}`)[0];

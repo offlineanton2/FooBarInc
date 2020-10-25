@@ -6,11 +6,11 @@ import Button from './button';
 import Card from './card';
 
 const Item = styled(Card)`
-  margin-bottom: 1em;
-  padding: 1em;
+  align-items: center;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  margin-bottom: 1em;
+  padding: 1em;
 `;
 
 export const Address = styled.div`
@@ -37,6 +37,9 @@ export const Date = styled.div`
   width: 155px;
 `;
 
+/**
+ *  Single record list item to be used on records route
+ */
 const RecordItem = (
   {
     primaryAddressableObjectName,
