@@ -30,9 +30,16 @@ npm start
 To view the UI in your browser, simply access localhost:3000 in your web browser.
 
 
-### Packages used
+## Packages used
 
-## React Testing Library
+### React Testing Library
 
 React testing library was used for testing the UI with unit tests in an accessible way.
 
+### React Dates
+
+[Airbnb's React Dates](https://github.com/airbnb/react-dates) was used for a date picker component to select a date range.
+
+### Create react app
+
+Create react app was used to quickly get the boilerplate set up for the app.
