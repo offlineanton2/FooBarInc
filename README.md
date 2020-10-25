@@ -22,7 +22,7 @@ npm install
 To run the UI type the following line in your terminal, which will create a local webserver.
 
 ```
-npm start
+npm run start
 ```
 
 ### Access the UI
@@ -43,3 +43,6 @@ React testing library was used for testing the UI with unit tests in an accessib
 ### Create react app
 
 Create react app was used to quickly get the boilerplate set up for the app.
+
+
+Not all components/routes have unit tests, for an example of how unit tests would test accessibilty see the pagination.test.tsx or run `npm run test`.
